@@ -3,7 +3,7 @@ from turtle import Turtle, Screen
 class ClickableTurtle(Turtle):
   # our 'wrapper' class of the Turtle class
   def __init__(self, 
-               name = "button", 
+               name = "click me", 
                x = 0 , 
                y = -100):
     # Runs Keyboard Turtle Constructor as well as the Turtle Constructor
@@ -16,9 +16,9 @@ class ClickableTurtle(Turtle):
     self.window = Screen()
 
     #set turtle starting states
-    self.shape("square")
+    self.shape("circle")
     self.shapesize(1,3,1)
-    self.color("tan")
+    self.color("purple")
     self.penup()
     self.setx(self.x)
     self.sety(self.y)
@@ -29,13 +29,13 @@ class ClickableTurtle(Turtle):
   # Draws the button name above the button
   def draw_title(self, text, x, y):
     self.goto(self.x, self.y + 17)
-    self.write(text, move=False, align='center', font=('Arial', 10, 'normal'))
+    self.write(text, move=False, align='center', font=('Arial', 50, 'normal'))
     self.goto(self.x, self.y)
 
   # tells what happens when button is clicked
   def click(self, x, y):
     # This is Placeholder:  What should this button do?
-    print ("Click")
+    print ("Happy Birthday!!!")
 
   # TODO:  
   # 1) Change the button color 
