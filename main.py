@@ -1,10 +1,13 @@
 from turtle import Screen
 from keyboardturtle import KeyboardTurtle
 from clickableturtle import ClickableTurtle
+from movingturtle import MovingTurtle
 
 
 # set up instance of the screen
 window = Screen()
+screen_width = 600
+screen_height = 400
 window.setup(800, 500)
 
 # set up clickable instance
@@ -20,6 +23,7 @@ player_1.goto(100,0)
 player_1.other_player = player_2
 player_2.other_player = player_1
 
+moveT = MovingTurtle(screen_width)
 
 # This is needed to listen for inputs
 window.listen()
