@@ -1,9 +1,10 @@
 from turtle import Turtle, Screen
+import os
 
 class ClickableTurtle(Turtle):
   # our 'wrapper' class of the Turtle class
   def __init__(self, 
-               name = "click me", 
+               name = " click to start over ", 
                x = 0 , 
                y = -100):
     # Runs Keyboard Turtle Constructor as well as the Turtle Constructor
@@ -18,24 +19,25 @@ class ClickableTurtle(Turtle):
     #set turtle starting states
     self.shape("circle")
     self.shapesize(1,3,1)
-    self.color("purple")
+    self.color("white")
     self.penup()
     self.setx(self.x)
     self.sety(self.y)
     self.draw_title(self.name, self.x, self.y)
     self.window.onscreenclick(None)
     self.onclick(self.click)
-
+  
+  
   # Draws the button name above the button
   def draw_title(self, text, x, y):
     self.goto(self.x, self.y + 17)
-    self.write(text, move=False, align='center', font=('Arial', 50, 'normal'))
+    self.write(text, move=False, align='center', font=('Arial', 10, 'normal'))
     self.goto(self.x, self.y)
 
   # tells what happens when button is clicked
   def click(self, x, y):
     # This is Placeholder:  What should this button do?
-    print ("Happy Birthday!!!")
+    os.system("python3 main.py")
 
   # TODO:  
   # 1) Change the button color 
